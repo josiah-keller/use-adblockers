@@ -1,0 +1,23 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+
+#intro {
+    width: 100vw;
+    height: 85vh;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,198,178,1) 100%);
+    background-size: 100vw 200vh;
+}
+#logo {
+    color: #FF7135;
+    font-size: 5rem;
+    display: inline-block;
+    margin: auto;
+}

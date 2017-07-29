@@ -1,0 +1,15 @@
+{
+  "name": "use-adblockers",
+  "version": "0.1.0",
+  "description": "UseAdblockers.org website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Josiah Keller",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

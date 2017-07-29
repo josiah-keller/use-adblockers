@@ -16,8 +16,15 @@ body {
     background-size: 100vw 200vh;
 }
 #logo {
-    color: #FF7135;
+    color: #FF683A;
     font-size: 5rem;
+    text-align: center;
+}
+#logo-content {
+    margin-top: 3rem;
     display: inline-block;
-    margin: auto;
+    text-align: left;
+}
+#logo-content-dotorg {
+    text-align: right;
 }

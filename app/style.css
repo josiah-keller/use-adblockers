@@ -2,7 +2,7 @@ html {
     font-size: 10px;
 }
 body {
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-family: Lato, Helvetica, Arial, sans-serif;
     color: #000;
     background: #fff;
     margin: 0px;
@@ -17,6 +17,7 @@ a {
     width: 100%;
     background: radial-gradient(ellipse at bottom, #fff 0%, #FFC6B2 100%);
     padding: 0 0 1rem;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
 }
 #logo {
     color: #FF683A;
@@ -73,6 +74,7 @@ a {
     margin: 0;
     font-size: 2rem;
     font-weight: normal;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
     color: #FF683A;
 }
 #primary-reasons p {
@@ -88,17 +90,20 @@ a {
 #secondary-reasons h2 {
     margin: 0 0 2rem;
     font-size: 2rem;
-    text-align: center;
     font-weight: normal;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    text-align: center;
     color: #FF683A;
 }
 #secondary-reasons h3 {
     margin: 0;
     font-size: 1.8rem;
     font-weight: normal;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
 }
 #secondary-reasons p {
     font-size: 1.6rem;
+    line-height: 1.4;
 }
 
 .columns {

@@ -12,8 +12,8 @@ body {
 #intro {
     width: 100vw;
     height: 85vh;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,198,178,1) 100%);
-    background-size: 100vw 200vh;
+    background: radial-gradient(ellipse at bottom, rgba(255,255,255,1) 0%,rgba(255,198,178,1) 100%);
+    /* background-size: 100vw 200vh; */
 }
 #logo {
     color: #FF683A;
@@ -27,4 +27,33 @@ body {
 }
 #logo-content-dotorg {
     text-align: right;
+}
+
+#intro-copy {
+    width: 50%;
+    margin: 2rem auto;
+    font-size: 3rem;
+}
+
+.action-buttons {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+.action-button {
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: radial-gradient(ellipse at 50% -50%, #FFC6B2 0%, #FF683A 100%);
+    color: #fff;
+    text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
+    border: 1px solid #FF683A;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.action-button:hover {
+    background: radial-gradient(ellipse at 50% 0%, #FFC6B2 0%, #FF683A 100%);
+}
+.action-button.action-button-primary {
+    box-shadow: 0px 0px 20px #FF683A;
 }

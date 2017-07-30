@@ -15,7 +15,7 @@ a {
 
 #intro {
     width: 100%;
-    background: radial-gradient(ellipse at bottom, rgba(255,255,255,1) 0%,rgba(255,198,178,1) 100%);
+    background: radial-gradient(ellipse at bottom, #fff 0%, #FFC6B2 100%);
     padding: 0 0 1rem;
 }
 #logo {
@@ -65,6 +65,9 @@ a {
     background: #323232;
     color: #fff;
     padding: 2rem 1rem;
+    border-bottom: 0.5rem solid #FF683A;
+    box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 1);
+    position: relative;
 }
 #primary-reasons h2 {
     margin: 0;
@@ -75,6 +78,27 @@ a {
 #primary-reasons p {
     font-size: 1.8rem;
     line-height: 1.4;
+}
+
+#secondary-reasons {
+    background: #222;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+#secondary-reasons h2 {
+    margin: 0 0 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+    color: #FF683A;
+}
+#secondary-reasons h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+#secondary-reasons p {
+    font-size: 1.6rem;
 }
 
 .columns {
@@ -88,5 +112,9 @@ a {
 
 .h2-icon {
     height: 2rem;
+    vertical-align: middle;
+}
+.h3-icon {
+    height: 1.8rem;
     vertical-align: middle;
 }

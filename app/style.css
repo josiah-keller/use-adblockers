@@ -135,6 +135,12 @@ a {
     display: none;
 }
 
+footer {
+    margin: 10rem 0 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 .columns {
     display: flex;
     justify-content: space-between;

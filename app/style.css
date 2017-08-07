@@ -54,12 +54,49 @@ a {
     border: 1px solid #FF683A;
     border-radius: 3px;
     cursor: pointer;
+    position: relative;
 }
 .action-button:hover {
     background: radial-gradient(ellipse at 50% 0%, #FFC6B2 0%, #FF683A 100%);
 }
 .action-button.action-button-primary {
     box-shadow: 0px 0px 20px #FF683A;
+}
+
+#what-is {
+    background: #fdfdfd;
+    color: #323232;
+    padding: 2rem 25%;
+    border-top: 1px solid #cccccc;
+    border-bottom: 0.5rem solid #FF683A;
+    position: relative;
+    display: none;
+}
+#what-is p {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+#what-is-button .nub {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 1px);
+    width: 5.657rem;
+    height: 5.657rem;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    background: white;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    z-index: 1;
+    display: none;
+}
+
+.what-is-toggled #what-is {
+    display: block;
+}
+.what-is-toggled #what-is-button .nub {
+    display: block;
 }
 
 #primary-reasons {

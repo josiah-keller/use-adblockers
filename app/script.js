@@ -15,8 +15,13 @@ function toggleSecondaryReasons() {
     document.body.classList.toggle("secondary-reasons-toggled");
 }
 
+function toggleWhatIs() {
+    document.body.classList.toggle("what-is-toggled");
+}
+
 function init() {
     clickable($("secondary-reasons-toggle"), toggleSecondaryReasons);
+    clickable($("what-is-button"), toggleWhatIs);
 }
 
 document.addEventListener("DOMContentLoaded", init);

@@ -107,7 +107,7 @@ a {
     height: 5.657rem;
     transform: rotate(45deg);
     transform-origin: 0 0;
-    background: white;
+    background: #fdfdfd;
     border-top: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
     z-index: 1;

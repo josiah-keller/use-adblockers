@@ -3,7 +3,10 @@ function $(id) {
 }
 
 function clickable(element, handler) {
-    element.addEventListener("click", handler);
+    element.addEventListener("click", function(e) {
+        this.blur();
+        handler.call(this, e);
+    });
     element.addEventListener("keypress", function(e) {
         if (e.keyCode !== 13) return;
         e.preventDefault();

@@ -21,13 +21,14 @@ a {
 }
 #logo {
     color: #FF683A;
-    font-size: 5rem;
     text-align: center;
 }
 #logo-content {
-    margin-top: 3rem;
+    margin: 3rem 0 0 0;
     display: inline-block;
     text-align: left;
+    font-size: 5rem;
+    font-weight: normal;
 }
 #logo-content-dotorg {
     text-align: right;

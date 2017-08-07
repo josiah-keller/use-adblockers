@@ -25,9 +25,15 @@ function toggleWhatIs() {
     document.body.classList.toggle("what-is-toggled");
 }
 
+function toggleWizard() {
+    document.body.classList.toggle("wizard-toggled");
+}
+
 function init() {
     clickable($("secondary-reasons-toggle"), toggleSecondaryReasons);
     clickable($("what-is-button"), toggleWhatIs);
+    clickable($("wizard-close"), toggleWizard);
+    clickable($("get-started-button"), toggleWizard);
 }
 
 document.addEventListener("DOMContentLoaded", init);

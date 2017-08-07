@@ -12,6 +12,9 @@ function clickable(element, handler) {
         e.preventDefault();
         handler.call(this, e);
     });
+    element.querySelectorAll("img").forEach(img => {
+        img.draggable = false;
+    });
 }
 
 function toggleSecondaryReasons() {

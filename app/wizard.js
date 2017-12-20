@@ -9,11 +9,11 @@ let fab = new FuckAdBlock({
 let initialized = false, adblockerPresent = null;
 
 export default {
-    initialize: () => {
-        fuckAdBlock.onDetected(() => {
+    initialize: function() {
+        fab.onDetected(() => {
             adblockerPresent = true;
         });
-        fuckAdBlock.onNotDetected(() => {
+        fab.onNotDetected(() => {
             adblockerPresent = false;
         });
         
@@ -21,7 +21,7 @@ export default {
         
         this.updateUi();
     },
-    updateUi: () => {
+    updateUi: function() {
         $("wizard-contents").innerHTML = adblockerPresent ? "Present" : "Not present";
     },
 };

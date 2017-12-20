@@ -10,7 +10,9 @@
   "author": "Josiah Keller",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.3"
+    "bowser": "^1.8.1",
+    "express": "^4.15.3",
+    "fuckadblock": "^3.2.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",

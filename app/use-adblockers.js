@@ -1,21 +1,7 @@
-function $(id) {
-    return document.getElementById(id);
-}
+import wizard from "./wizard";
+import { $, clickable } from "./utils";
 
-function clickable(element, handler) {
-    element.addEventListener("click", function(e) {
-        this.blur();
-        handler.call(this, e);
-    });
-    element.addEventListener("keypress", function(e) {
-        if (e.keyCode !== 13) return;
-        e.preventDefault();
-        handler.call(this, e);
-    });
-    element.querySelectorAll("img").forEach(img => {
-        img.draggable = false;
-    });
-}
+let wizardVisible = false;
 
 function toggleSecondaryReasons() {
     document.body.classList.toggle("secondary-reasons-toggled");
@@ -27,6 +13,10 @@ function toggleWhatIs() {
 
 function toggleWizard() {
     document.body.classList.toggle("wizard-toggled");
+    wizardVisible = ! wizardVisible;
+    if (wizardVisible) {
+        wizard.updateUi();
+    }
 }
 
 function init() {
@@ -34,6 +24,8 @@ function init() {
     clickable($("what-is-button"), toggleWhatIs);
     clickable($("wizard-close"), toggleWizard);
     clickable($("get-started-button"), toggleWizard);
+
+    wizard.initialize();
 }
 
 document.addEventListener("DOMContentLoaded", init);

@@ -208,26 +208,93 @@ a {
     transition: transform 0.25s ease-out;
     transition-property: transform, opacity;
     visibility: hidden;
-}
-#wizard h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    color: #FF683A;
-}
-#wizard-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: #ffffff;
-    border: 0;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Quicksand, Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        color: #FF683A;
+    }
+
+    #wizard-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #ffffff;
+        border: 0;
+    }
+
+    #wizard-contents {
+        font-size: 1.8rem;
+        margin: 2.0rem;
+
+        h3 {
+            font-size: 2.2rem;
+        }
+    }
+    
+    #wizard-adblocker-present {
+        display: none;
+    }
+    
+    #wizard-adblocker-absent {
+        display: none;
+    }
+
+    #wizard-unknown-browser {
+        display: none;
+    }
+
+    #wizard-loading {
+        display: block;
+        font-size: 3rem;
+        text-align: center;
+
+        .spinner {
+            width: 10%;
+        }
+
+        span {
+            display: block;
+        }
+    }
 }
 
 .wizard-toggled #wizard {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+}
+
+.adblocker-present #wizard {
+    #wizard-adblocker-present {
+        display: block;
+    }
+
+    #wizard-loading {
+        display: none;
+    }
+}
+
+.adblocker-absent:not(.unknown-browser) #wizard {
+    #wizard-adblocker-absent {
+        display: block;
+    }
+
+    #wizard-loading {
+        display: none;
+    }
+}
+
+.unknown-browser:not(.adblocker-present) #wizard {
+    #wizard-unknown-browser {
+        display: block;
+    }
+
+    #wizard-loading {
+        display: none;
+    }
 }
 
 footer {
@@ -252,4 +319,25 @@ footer {
 .h3-icon {
     height: 1.8rem;
     vertical-align: middle;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spinner {
+    display: inline-block;
+    width: 32px;
+
+    img {
+        width: 100%;
+        animation: spin 2s ease-out infinite;
+    }
 }

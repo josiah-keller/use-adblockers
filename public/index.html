@@ -120,6 +120,24 @@
             </button>
             <h2>Say goodbye to ads forever</h2>
             <div id="wizard-contents">
+                <div id="wizard-adblocker-present">
+                    <h3>Congratulations!</h3>
+                    <p>It looks like you're already blocking ads.  Way to go!</p>
+                </div>
+                <div id="wizard-adblocker-absent">
+                    <h3>Here's the best way to block ads in <span class="wizard-browser-name"></span></h3>
+                </div>
+                <div id="wizard-unknown-browser">
+                    <h3>Oops</h3>
+                    <p>Sorry, we can't tell what browser you're using.  Is it a new or less common one?</p>
+                    <p>If you'd like to help, you can report this on GitHub.</p>
+                </div>
+                <div id="wizard-loading">
+                    <div class="spinner">
+                        <img src="/images/cog.svg" alt="Spinning cog">
+                    </div>
+                    <span>Wait a moment while we check your browser...</span>
+                </div>
             </div>
         </section>
 

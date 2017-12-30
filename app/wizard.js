@@ -1,6 +1,6 @@
 import "fuckadblock";
 import bowser from "bowser";
-import { $, clickable, setConditionalClass, bindText } from "./utils";
+import { $, clickable, setConditionalClass, bindText, bindProp } from "./utils";
 import wizardData from "./wizard-data";
 
 let fab = new FuckAdBlock({
@@ -8,7 +8,11 @@ let fab = new FuckAdBlock({
     resetOnEnd: true,
 });
 
-let initialized = false, adblockerPresent = null, browserName = null, unknownBrowser = false;
+let initialized = false,
+    adblockerPresent = null,
+    browserName = null,
+    unknownBrowser = false,
+    selectedAdblockerIndex = 0;
 
 export default {
     initialize: function() {
@@ -46,7 +50,13 @@ export default {
         setConditionalClass("adblocker-absent", ! adblockerPresent);
         if (! unknownBrowser) {
             let browser = wizardData[browserName];
+            let selectedAdblocker = browser.adblockers[selectedAdblockerIndex];
+
             bindText("wizard-browser-name", browser.name);
+            bindText("wizard-adblocker-name", selectedAdblocker.name);
+            bindText("wizard-adblocker-description", selectedAdblocker.description);
+            bindText("wizard-adblocker-install", selectedAdblocker.button);
+            bindProp("wizard-adblocker-install", "href", selectedAdblocker.url);
         }
     },
 };

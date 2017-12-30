@@ -26,9 +26,13 @@ export function setConditionalClass(className, condition, element) {
     document.body.classList[condition ? "add" : "remove"](className);
 }
 
-export function bindText(className, text, context) {
+export function bindProp(className, propName, value, context) {
     context = context || document.body;
     toArray(context.querySelectorAll(`.${className}`)).forEach(element => {
-        element.textContent = text;
+        element[propName] = value;
     });
+}
+
+export function bindText(className, text, context) {
+    return bindProp(className, "textContent", text, context);
 }

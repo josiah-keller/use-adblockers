@@ -25,3 +25,10 @@ export function setConditionalClass(className, condition, element) {
     if (! element) element = document.body;
     document.body.classList[condition ? "add" : "remove"](className);
 }
+
+export function bindText(className, text, context) {
+    context = context || document.body;
+    toArray(context.querySelectorAll(`.${className}`)).forEach(element => {
+        element.textContent = text;
+    });
+}

@@ -45,6 +45,7 @@ a {
     margin: 2rem 0rem;
 }
 .action-button {
+    display: inline-block;
     font-family: Quicksand, Helvetica, Arial, sans-serif;
     font-size: 2rem;
     margin: 1rem;
@@ -241,6 +242,36 @@ a {
     
     #wizard-adblocker-absent {
         display: none;
+
+        #wizard-adblocker-details {
+            display: flex;
+        }
+        #wizard-adblocker-icon {
+            flex: 0 0 auto;
+            margin-right: 1.0rem;
+
+            img {
+                width: 100%;
+            }
+        }
+        #wizard-adblocker-info {
+            flex: 1 1 0;
+
+            h4 {
+                margin-top: 0px;
+            }
+        }
+
+        #wizard-adblocker-disclaimer {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: 2.0rem;
+        }
+
+        .wizard-adblocker-install {
+            margin-top: 0rem;
+            margin-left: 0rem;
+        }
     }
 
     #wizard-unknown-browser {

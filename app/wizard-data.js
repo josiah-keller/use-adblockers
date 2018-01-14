@@ -8,7 +8,7 @@ export default {
                 button: "Get it in the Chrome Web Store",
                 description: `uBlock Origin is an extension that you can add to Google Chrome.  It is very
                     effective at blocking ads and trackers.  To get it, click the button below, and then
-                    click 'Add to Chrome.'`,
+                    click "Add to Chrome."`,
             },
         ],
     },
@@ -20,7 +20,7 @@ export default {
                 url: "https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/",
                 button: "Get it from the Firefox Add-ons website",
                 description: `uBlock Origin is an extension that you can add to Firefox.  It is very effective
-                at blocking ads and trackers.  To get it, click the button below, and then click 'Add to Firefox.'`,
+                at blocking ads and trackers.  To get it, click the button below, and then click "Add to Firefox."`,
             },
         ],
     },
@@ -33,7 +33,7 @@ export default {
                 button: "Get it from the Microsoft Store",
                 description: `uBlock Origin is an extension that you can add to Microsoft Edge.  It is very
                 effective at blocking ads and trackers.  To get it, click the button below, and then click
-                'Install.'`,
+                "Install."`,
             },
         ],
     },

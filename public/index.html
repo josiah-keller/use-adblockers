@@ -120,6 +120,38 @@
             </button>
             <h2>Say goodbye to ads forever</h2>
             <div id="wizard-contents">
+                <div id="wizard-adblocker-present">
+                    <h3>Congratulations!</h3>
+                    <p>It looks like you're already blocking ads.  Way to go!</p>
+                </div>
+                <div id="wizard-adblocker-absent">
+                    <h3>Here's the best way to block ads in <span class="wizard-browser-name"></span>:</h3>
+                    <div id="wizard-adblocker-details">
+                        <div id="wizard-adblocker-icon-container">
+                            <img class="wizard-adblocker-icon">
+                        </div>
+                        <div id="wizard-adblocker-info">
+                            <h4 class="wizard-adblocker-name"></h4>
+                            <p class="wizard-adblocker-description"></p>
+                            <a class="wizard-adblocker-install action-button action-button-primary" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div id="wizard-adblocker-disclaimer">
+                        UseAdblockers.org is not affiliated with <span class="wizard-browser-name"></span>
+                        or <span class="wizard-adblocker-name"></span>
+                    </div>
+                </div>
+                <div id="wizard-unknown-browser">
+                    <h3>Oops</h3>
+                    <p>Sorry, we don't have any info for your browser.  Is it a new or less common one?</p>
+                    <p>If you'd like to help, you can report this on GitHub.</p>
+                </div>
+                <div id="wizard-loading">
+                    <div class="spinner">
+                        <img src="/images/cog.svg" alt="Spinning cog">
+                    </div>
+                    <span>Wait a moment while we check your browser...</span>
+                </div>
             </div>
         </section>
 

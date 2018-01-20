@@ -10,9 +10,14 @@
   "author": "Josiah Keller",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.3"
+    "bowser": "^1.8.1",
+    "express": "^4.15.3",
+    "fuckadblock": "^3.2.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-ie": "^6.7.0",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",

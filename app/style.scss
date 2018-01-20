@@ -246,12 +246,18 @@ a {
         #wizard-adblocker-details {
             display: flex;
         }
-        #wizard-adblocker-icon {
+        #wizard-adblocker-icon-container {
             flex: 0 0 auto;
-            margin-right: 1.0rem;
+            margin-right: 2.0rem;
+            padding-right: 1.0rem;
+            border-right: 1px solid #cccccc;
+            width: 12.8rem;
+            line-height: 12.8rem;
+            vertical-align: middle;
 
             img {
                 width: 100%;
+                vertical-align: middle;
             }
         }
         #wizard-adblocker-info {

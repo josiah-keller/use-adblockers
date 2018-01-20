@@ -54,6 +54,7 @@ export default {
 
             bindText("wizard-browser-name", browser.name);
             bindText("wizard-adblocker-name", selectedAdblocker.name);
+            bindProp("wizard-adblocker-icon", "src", selectedAdblocker.icon);
             bindText("wizard-adblocker-description", selectedAdblocker.description);
             bindText("wizard-adblocker-install", selectedAdblocker.button);
             bindProp("wizard-adblocker-install", "href", selectedAdblocker.url);

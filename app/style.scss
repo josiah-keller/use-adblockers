@@ -197,6 +197,15 @@ a {
     display: none;
 }
 
+#legal {
+    display: none;
+}
+.legal-toggled {
+    #legal {
+        display: block;
+    }
+}
+
 #wizard {
     position: fixed;
     left: 10%;

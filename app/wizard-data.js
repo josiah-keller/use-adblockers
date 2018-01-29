@@ -55,4 +55,18 @@ export default {
             },
         ],
     },
+    safari: {
+        name: "Safari",
+        adblockers: [
+            {
+                name: "Adguard",
+                url: "https://safari-extensions.apple.com/details/?id=com.adguard.safari-N33TQXN8C7",
+                button: "Get it from Safari Extensions",
+                description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
+                can block ads, trackers, and other nuisances.  To get it, click the button below, and then click
+                "Install."`,
+                icon: "/images/3rd-party-icons/adguard.svg",
+            },
+        ],
+    },
 };

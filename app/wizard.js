@@ -35,6 +35,9 @@ export default {
         if (bowser.msie) {
             browserName = "ie";
         }
+        if (bowser.safari) {
+            browserName = "safari";
+        }
         
         if (! browserName || ! wizardData.hasOwnProperty(browserName)) {
             unknownBrowser = true;

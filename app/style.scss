@@ -22,28 +22,28 @@ a {
     color: $foreground;
 }
 
-#intro {
+.intro {
     width: 100%;
     background: radial-gradient(ellipse at bottom, #fff 0%, $light-foreground 100%);
     padding: 0 0 1rem;
     font-family: $accent-font;
 }
-#logo {
+.logo {
     color: $foreground;
     text-align: center;
 }
-#logo-content {
+.logo-content {
     margin: 3rem 0 0 0;
     display: inline-block;
     text-align: left;
     font-size: 5rem;
     font-weight: normal;
 }
-#logo-content-dotorg {
+.logo-content-dotorg {
     text-align: right;
 }
 
-#intro-copy {
+.intro-copy {
     width: 50%;
     margin: 2rem auto;
     font-size: 3rem;
@@ -97,7 +97,7 @@ a {
     opacity: 0.5;
 }
 
-#what-is {
+.what-is {
     background: $callout-bg;
     color: $callout-fg;
     padding: 2rem 25%;
@@ -106,12 +106,12 @@ a {
     position: relative;
     display: none;
 }
-#what-is p {
+.what-is p {
     font-size: 1.8rem;
     margin: 2rem 0;
 }
 
-#what-is-button .nub {
+.what-is-button .nub {
     position: absolute;
     left: 50%;
     top: calc(100% + 1px);
@@ -126,38 +126,38 @@ a {
     display: none;
 }
 
-.what-is-toggled #what-is {
+.what-is-toggled .what-is {
     display: block;
 }
-.what-is-toggled #what-is-button .nub {
+.what-is-toggled .what-is-button .nub {
     display: block;
 }
 
-#primary-reasons {
+.primary-reasons {
     background: $callout-fg;
     color: #fff;
     padding: 2rem 1rem;
     position: relative;
 }
-#primary-reasons h2 {
+.primary-reasons h2 {
     margin: 0;
     font-size: 2rem;
     font-weight: normal;
     font-family: $accent-font;
     color: $foreground;
 }
-#primary-reasons p {
+.primary-reasons p {
     font-size: 1.8rem;
     line-height: 1.4;
 }
 
-#secondary-reasons {
+.secondary-reasons {
     background: #222;
     color: #fff;
     padding: 2rem 1rem;
     display: none;
 }
-#secondary-reasons h2 {
+.secondary-reasons h2 {
     margin: 0 0 2rem;
     font-size: 2rem;
     font-weight: normal;
@@ -165,18 +165,18 @@ a {
     text-align: center;
     color: $foreground;
 }
-#secondary-reasons h3 {
+.secondary-reasons h3 {
     margin: 0;
     font-size: 1.8rem;
     font-weight: normal;
     font-family: $accent-font;
 }
-#secondary-reasons p {
+.secondary-reasons p {
     font-size: 1.6rem;
     line-height: 1.5;
 }
 
-#secondary-reasons-toggle {
+.secondary-reasons-toggle {
     width: 100%;
     height: 4rem;
     background: $foreground;
@@ -187,7 +187,7 @@ a {
     line-height: 4rem;
     vertical-align: middle;
 }
-#secondary-reasons-toggle:hover {
+.secondary-reasons-toggle:hover {
     background: $foreground-hover;
 }
 .secondary-reasons-toggle-icon {
@@ -195,27 +195,27 @@ a {
     vertical-align: middle;
 }
 
-.secondary-reasons-toggled #primary-reasons {
+.secondary-reasons-toggled .primary-reasons {
     box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 1);
     border-bottom: 0.5rem solid $foreground;
 }
-.secondary-reasons-toggled #secondary-reasons {
+.secondary-reasons-toggled .secondary-reasons {
     display: block;
 }
-.secondary-reasons-toggled #secondary-reasons-toggle {
+.secondary-reasons-toggled .secondary-reasons-toggle {
     display: none;
 }
 
-#legal {
+.legal {
     display: none;
 }
 .legal-toggled {
-    #legal {
+    .legal {
         display: block;
     }
 }
 
-#wizard {
+.wizard {
     position: fixed;
     left: 10%;
     top: 5%;
@@ -237,7 +237,7 @@ a {
         color: $foreground;
     }
 
-    #wizard-close {
+    .wizard-close {
         position: absolute;
         right: 0;
         top: 0;
@@ -245,7 +245,7 @@ a {
         border: 0;
     }
 
-    #wizard-contents {
+    .wizard-contents {
         font-size: 1.8rem;
         margin: 2.0rem;
 
@@ -254,17 +254,17 @@ a {
         }
     }
     
-    #wizard-adblocker-present {
+    .wizard-adblocker-present {
         display: none;
     }
     
-    #wizard-adblocker-absent {
+    .wizard-adblocker-absent {
         display: none;
 
-        #wizard-adblocker-details {
+        .wizard-adblocker-details {
             display: flex;
         }
-        #wizard-adblocker-icon-container {
+        .wizard-adblocker-icon-container {
             flex: 0 0 auto;
             margin-right: 2.0rem;
             padding-right: 1.0rem;
@@ -278,7 +278,7 @@ a {
                 vertical-align: middle;
             }
         }
-        #wizard-adblocker-info {
+        .wizard-adblocker-info {
             flex: 1 1 0;
 
             h4 {
@@ -286,7 +286,7 @@ a {
             }
         }
 
-        #wizard-adblocker-disclaimer {
+        .wizard-adblocker-disclaimer {
             text-align: center;
             font-size: 1.4rem;
             margin-top: 2.0rem;
@@ -298,11 +298,11 @@ a {
         }
     }
 
-    #wizard-unknown-browser {
+    .wizard-unknown-browser {
         display: none;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: block;
         font-size: 3rem;
         text-align: center;
@@ -317,38 +317,38 @@ a {
     }
 }
 
-.wizard-toggled #wizard {
+.wizard-toggled .wizard {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
 }
 
-.adblocker-present #wizard {
-    #wizard-adblocker-present {
+.adblocker-present .wizard {
+    .wizard-adblocker-present {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }
 
-.adblocker-absent:not(.unknown-browser) #wizard {
-    #wizard-adblocker-absent {
+.adblocker-absent:not(.unknown-browser) .wizard {
+    .wizard-adblocker-absent {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }
 
-.unknown-browser:not(.adblocker-present) #wizard {
-    #wizard-unknown-browser {
+.unknown-browser:not(.adblocker-present) .wizard {
+    .wizard-unknown-browser {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }

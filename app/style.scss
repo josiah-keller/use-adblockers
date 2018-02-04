@@ -1,15 +1,21 @@
 $foreground: #FF683A;
 $foreground-hover: #E55E34;
 $light-foreground: #FFC6B2;
-$body-font: Lato, Helvetica, Arial, sans-serif;
-$accent-font: Quicksand, Helvetica, Arial, sans-serif;
+$body-font: Lato,
+Helvetica,
+Arial,
+sans-serif;
+$accent-font: Quicksand,
+Helvetica,
+Arial,
+sans-serif;
 $callout-bg: #fdfdfd;
 $callout-fg: #323232;
 $callout-border: #cccccc;
-
 html {
     font-size: 10px;
 }
+
 body {
     font-family: $body-font;
     color: #000;
@@ -28,10 +34,12 @@ a {
     padding: 0 0 1rem;
     font-family: $accent-font;
 }
+
 .logo {
     color: $foreground;
     text-align: center;
 }
+
 .logo-content {
     margin: 3rem 0 0 0;
     display: inline-block;
@@ -39,6 +47,7 @@ a {
     font-size: 5rem;
     font-weight: normal;
 }
+
 .logo-content-dotorg {
     text-align: right;
 }
@@ -50,13 +59,14 @@ a {
 }
 
 .footer-social {
-	margin-bottom: 1%;
+    margin-bottom: 1.2rem;
 }
 
 .action-buttons {
     text-align: center;
     margin: 2rem 0rem;
 }
+
 .action-button {
     display: inline-block;
     font-family: $accent-font;
@@ -71,7 +81,6 @@ a {
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    
     &:hover {
         background: radial-gradient(ellipse at 50% 0%, $light-foreground 0%, $foreground 100%);
     }
@@ -110,7 +119,6 @@ a {
     border-bottom: 0.5rem solid $foreground;
     position: relative;
     display: none;
-    
     p {
         font-size: 1.8rem;
         margin: 2rem 0;
@@ -146,7 +154,6 @@ a {
     color: #fff;
     padding: 2rem 1rem;
     position: relative;
-
     h2 {
         margin: 0;
         font-size: 2rem;
@@ -154,7 +161,6 @@ a {
         font-family: $accent-font;
         color: $foreground;
     }
-
     p {
         font-size: 1.8rem;
         line-height: 1.4;
@@ -196,11 +202,11 @@ a {
     cursor: pointer;
     line-height: 4rem;
     vertical-align: middle;
-
     &:hover {
         background: $foreground-hover;
     }
 }
+
 .secondary-reasons-toggle-icon {
     height: 1.8rem;
     vertical-align: middle;
@@ -222,6 +228,7 @@ a {
 .legal {
     display: none;
 }
+
 .legal-toggled {
     .legal {
         display: block;
@@ -241,7 +248,6 @@ a {
     transition: transform 0.25s ease-out;
     transition-property: transform, opacity;
     visibility: hidden;
-
     h2 {
         text-align: center;
         font-size: 3rem;
@@ -249,7 +255,6 @@ a {
         font-weight: normal;
         color: $foreground;
     }
-
     .wizard-close {
         position: absolute;
         right: 0;
@@ -257,23 +262,18 @@ a {
         background: $callout-bg;
         border: 0;
     }
-
     .wizard-contents {
         font-size: 1.8rem;
         margin: 2.0rem;
-
         h3 {
             font-size: 2.2rem;
         }
     }
-    
     .wizard-adblocker-present {
         display: none;
     }
-    
     .wizard-adblocker-absent {
         display: none;
-
         .wizard-adblocker-details {
             display: flex;
         }
@@ -285,7 +285,6 @@ a {
             width: 12.8rem;
             line-height: 12.8rem;
             vertical-align: middle;
-
             img {
                 width: 100%;
                 vertical-align: middle;
@@ -293,37 +292,30 @@ a {
         }
         .wizard-adblocker-info {
             flex: 1 1 0;
-
             h4 {
                 margin-top: 0px;
             }
         }
-
         .wizard-adblocker-disclaimer {
             text-align: center;
             font-size: 1.4rem;
             margin-top: 2.0rem;
         }
-
         .wizard-adblocker-install {
             margin-top: 0rem;
             margin-left: 0rem;
         }
     }
-
     .wizard-unknown-browser {
         display: none;
     }
-
     .wizard-loading {
         display: block;
         font-size: 3rem;
         text-align: center;
-
         .spinner {
             width: 10%;
         }
-
         span {
             display: block;
         }
@@ -340,7 +332,6 @@ a {
     .wizard-adblocker-present {
         display: block;
     }
-
     .wizard-loading {
         display: none;
     }
@@ -350,7 +341,6 @@ a {
     .wizard-adblocker-absent {
         display: block;
     }
-
     .wizard-loading {
         display: none;
     }
@@ -360,7 +350,6 @@ a {
     .wizard-unknown-browser {
         display: block;
     }
-
     .wizard-loading {
         display: none;
     }
@@ -376,6 +365,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 .column {
     flex: 1 1 0;
     padding: 0 1rem;
@@ -385,6 +375,7 @@ footer {
     height: 2rem;
     vertical-align: middle;
 }
+
 .h3-icon {
     height: 1.8rem;
     vertical-align: middle;
@@ -401,10 +392,10 @@ footer {
         transform: rotate(360deg);
     }
 }
+
 .spinner {
     display: inline-block;
     width: 32px;
-
     img {
         width: 100%;
         animation: spin 2s ease-out infinite;

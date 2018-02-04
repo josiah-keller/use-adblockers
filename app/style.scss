@@ -1,8 +1,17 @@
+$foreground: #FF683A;
+$foreground-hover: #E55E34;
+$light-foreground: #FFC6B2;
+$body-font: Lato, Helvetica, Arial, sans-serif;
+$accent-font: Quicksand, Helvetica, Arial, sans-serif;
+$callout-bg: #fdfdfd;
+$callout-fg: #323232;
+$callout-border: #cccccc;
+
 html {
     font-size: 10px;
 }
 body {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family: $body-font;
     color: #000;
     background: #fff;
     margin: 0px;
@@ -10,31 +19,31 @@ body {
 }
 
 a {
-    color: #FF683A;
+    color: $foreground;
 }
 
-#intro {
+.intro {
     width: 100%;
-    background: radial-gradient(ellipse at bottom, #fff 0%, #FFC6B2 100%);
+    background: radial-gradient(ellipse at bottom, #fff 0%, $light-foreground 100%);
     padding: 0 0 1rem;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-family: $accent-font;
 }
-#logo {
-    color: #FF683A;
+.logo {
+    color: $foreground;
     text-align: center;
 }
-#logo-content {
+.logo-content {
     margin: 3rem 0 0 0;
     display: inline-block;
     text-align: left;
     font-size: 5rem;
     font-weight: normal;
 }
-#logo-content-dotorg {
+.logo-content-dotorg {
     text-align: right;
 }
 
-#intro-copy {
+.intro-copy {
     width: 50%;
     margin: 2rem auto;
     font-size: 3rem;
@@ -46,63 +55,66 @@ a {
 }
 .action-button {
     display: inline-block;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-family: $accent-font;
     font-size: 2rem;
     margin: 1rem;
     padding: 1rem 2rem;
-    background: radial-gradient(ellipse at 50% -50%, #FFC6B2 0%, #FF683A 100%);
+    background: radial-gradient(ellipse at 50% -50%, $light-foreground 0%, $foreground 100%);
     color: #fff;
     text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
-    border: 1px solid #FF683A;
+    border: 1px solid $foreground;
     border-radius: 3px;
     cursor: pointer;
     position: relative;
     text-decoration: none;
-}
-.action-button:hover {
-    background: radial-gradient(ellipse at 50% 0%, #FFC6B2 0%, #FF683A 100%);
-}
-.action-button.action-button-primary {
-    box-shadow: 0px 0px 20px #FF683A;
-}
-.action-button:focus {
-    outline: 0;
-}
-.action-button::before {
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 100%;
-    height: 100%;
-    padding: 3px;
-    border: 2px solid #323232;
-    border-radius: 6px;
-    content: ' ';
-    transform: scale(1.1);
-    opacity: 0;
-    transition: transform 0.125s ease-out;
-    transition-property: transform, opacity;
-}
-.action-button:focus:not(:active)::before {
-    transform: scale(1);
-    opacity: 0.5;
+    
+    &:hover {
+        background: radial-gradient(ellipse at 50% 0%, $light-foreground 0%, $foreground 100%);
+    }
+    &:focus {
+        outline: 0;
+    }
+    &::before {
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        width: 100%;
+        height: 100%;
+        padding: 3px;
+        border: 2px solid #323232;
+        border-radius: 6px;
+        content: ' ';
+        transform: scale(1.1);
+        opacity: 0;
+        transition: transform 0.125s ease-out;
+        transition-property: transform, opacity;
+    }
+    &:focus:not(:active)::before {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    .action-button-primary {
+        box-shadow: 0px 0px 20px $foreground;
+    }
 }
 
-#what-is {
-    background: #fdfdfd;
-    color: #323232;
+.what-is {
+    background: $callout-bg;
+    color: $callout-fg;
     padding: 2rem 25%;
-    border-top: 1px solid #cccccc;
-    border-bottom: 0.5rem solid #FF683A;
+    border-top: 1px solid $callout-border;
+    border-bottom: 0.5rem solid $foreground;
     position: relative;
     display: none;
-}
-#what-is p {
-    font-size: 1.8rem;
-    margin: 2rem 0;
+    
+    p {
+        font-size: 1.8rem;
+        margin: 2rem 0;
+    }
 }
 
-#what-is-button .nub {
+.what-is-button .nub {
     position: absolute;
     left: 50%;
     top: calc(100% + 1px);
@@ -110,109 +122,116 @@ a {
     height: 5.657rem;
     transform: rotate(45deg);
     transform-origin: 0 0;
-    background: #fdfdfd;
-    border-top: 1px solid #cccccc;
-    border-left: 1px solid #cccccc;
+    background: $callout-bg;
+    border-top: 1px solid $callout-border;
+    border-left: 1px solid $callout-border;
     z-index: 1;
     display: none;
 }
 
-.what-is-toggled #what-is {
-    display: block;
-}
-.what-is-toggled #what-is-button .nub {
-    display: block;
+.what-is-toggled {
+    .what-is {
+        display: block;
+    }
+    .what-is-button .nub {
+        display: block;
+    }
 }
 
-#primary-reasons {
-    background: #323232;
+.primary-reasons {
+    background: $callout-fg;
     color: #fff;
     padding: 2rem 1rem;
     position: relative;
-}
-#primary-reasons h2 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: normal;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
-    color: #FF683A;
-}
-#primary-reasons p {
-    font-size: 1.8rem;
-    line-height: 1.4;
+
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: normal;
+        font-family: $accent-font;
+        color: $foreground;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
 }
 
-#secondary-reasons {
+.secondary-reasons {
     background: #222;
     color: #fff;
     padding: 2rem 1rem;
     display: none;
-}
-#secondary-reasons h2 {
-    margin: 0 0 2rem;
-    font-size: 2rem;
-    font-weight: normal;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #FF683A;
-}
-#secondary-reasons h3 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: normal;
-    font-family: Quicksand, Helvetica, Arial, sans-serif;
-}
-#secondary-reasons p {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    h2 {
+        margin: 0 0 2rem;
+        font-size: 2rem;
+        font-weight: normal;
+        font-family: $accent-font;
+        text-align: center;
+        color: $foreground;
+    }
+    h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: normal;
+        font-family: $accent-font;
+    }
+    p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
 }
 
-#secondary-reasons-toggle {
+.secondary-reasons-toggle {
     width: 100%;
     height: 4rem;
-    background: #FF683A;
+    background: $foreground;
     font-size: 1.8rem;
     color: #fff;
     text-align: center;
     cursor: pointer;
     line-height: 4rem;
     vertical-align: middle;
-}
-#secondary-reasons-toggle:hover {
-    background: #E55E34;
+
+    &:hover {
+        background: $foreground-hover;
+    }
 }
 .secondary-reasons-toggle-icon {
     height: 1.8rem;
     vertical-align: middle;
 }
 
-.secondary-reasons-toggled #primary-reasons {
-    box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 1);
-    border-bottom: 0.5rem solid #FF683A;
-}
-.secondary-reasons-toggled #secondary-reasons {
-    display: block;
-}
-.secondary-reasons-toggled #secondary-reasons-toggle {
-    display: none;
+.secondary-reasons-toggled {
+    .primary-reasons {
+        box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 1);
+        border-bottom: 0.5rem solid $foreground;
+    }
+    .secondary-reasons {
+        display: block;
+    }
+    .secondary-reasons-toggle {
+        display: none;
+    }
 }
 
-#legal {
+.legal {
     display: none;
 }
 .legal-toggled {
-    #legal {
+    .legal {
         display: block;
     }
 }
 
-#wizard {
+.wizard {
     position: fixed;
     left: 10%;
     top: 5%;
     width: 80%;
     height: 90%;
-    background: #ffffff;
+    background: $callout-bg;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
     opacity: 0;
     transform: scale(0.9);
@@ -223,20 +242,20 @@ a {
     h2 {
         text-align: center;
         font-size: 3rem;
-        font-family: Quicksand, Helvetica, Arial, sans-serif;
+        font-family: $accent-font;
         font-weight: normal;
-        color: #FF683A;
+        color: $foreground;
     }
 
-    #wizard-close {
+    .wizard-close {
         position: absolute;
         right: 0;
         top: 0;
-        background: #ffffff;
+        background: $callout-bg;
         border: 0;
     }
 
-    #wizard-contents {
+    .wizard-contents {
         font-size: 1.8rem;
         margin: 2.0rem;
 
@@ -245,21 +264,21 @@ a {
         }
     }
     
-    #wizard-adblocker-present {
+    .wizard-adblocker-present {
         display: none;
     }
     
-    #wizard-adblocker-absent {
+    .wizard-adblocker-absent {
         display: none;
 
-        #wizard-adblocker-details {
+        .wizard-adblocker-details {
             display: flex;
         }
-        #wizard-adblocker-icon-container {
+        .wizard-adblocker-icon-container {
             flex: 0 0 auto;
             margin-right: 2.0rem;
             padding-right: 1.0rem;
-            border-right: 1px solid #cccccc;
+            border-right: 1px solid $callout-border;
             width: 12.8rem;
             line-height: 12.8rem;
             vertical-align: middle;
@@ -269,7 +288,7 @@ a {
                 vertical-align: middle;
             }
         }
-        #wizard-adblocker-info {
+        .wizard-adblocker-info {
             flex: 1 1 0;
 
             h4 {
@@ -277,7 +296,7 @@ a {
             }
         }
 
-        #wizard-adblocker-disclaimer {
+        .wizard-adblocker-disclaimer {
             text-align: center;
             font-size: 1.4rem;
             margin-top: 2.0rem;
@@ -289,11 +308,11 @@ a {
         }
     }
 
-    #wizard-unknown-browser {
+    .wizard-unknown-browser {
         display: none;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: block;
         font-size: 3rem;
         text-align: center;
@@ -308,38 +327,38 @@ a {
     }
 }
 
-.wizard-toggled #wizard {
+.wizard-toggled .wizard {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
 }
 
-.adblocker-present #wizard {
-    #wizard-adblocker-present {
+.adblocker-present .wizard {
+    .wizard-adblocker-present {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }
 
-.adblocker-absent:not(.unknown-browser) #wizard {
-    #wizard-adblocker-absent {
+.adblocker-absent:not(.unknown-browser) .wizard {
+    .wizard-adblocker-absent {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }
 
-.unknown-browser:not(.adblocker-present) #wizard {
-    #wizard-unknown-browser {
+.unknown-browser:not(.adblocker-present) .wizard {
+    .wizard-unknown-browser {
         display: block;
     }
 
-    #wizard-loading {
+    .wizard-loading {
         display: none;
     }
 }

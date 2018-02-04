@@ -25,11 +25,11 @@ function toggleLegal(e) {
 }
 
 function init() {
-    clickable($("secondary-reasons-toggle"), toggleSecondaryReasons);
-    clickable($("what-is-button"), toggleWhatIs);
-    clickable($("wizard-close"), toggleWizard);
-    clickable($("get-started-button"), toggleWizard);
-    clickable($("legal-link"), toggleLegal);
+    clickable($(".secondary-reasons-toggle"), toggleSecondaryReasons);
+    clickable($(".what-is-button"), toggleWhatIs);
+    clickable($(".wizard-close"), toggleWizard);
+    clickable($(".get-started-button"), toggleWizard);
+    clickable($(".legal-link"), toggleLegal);
 
     wizard.initialize();
 }

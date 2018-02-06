@@ -43,14 +43,6 @@ a {
     text-align: right;
 }
 
-.footer-social {
-    margin-bottom: 1.2rem;
-}
-
-.footer-social a {
-    text-decoration: none;
-}
-
 .intro-copy {
     width: 50%;
     margin: 2rem auto;
@@ -374,6 +366,14 @@ footer {
     margin: 10rem 0 1rem;
     font-size: 1.4rem;
     text-align: center;
+
+    .footer-social {
+        margin-bottom: 1.2rem;
+        
+        a {
+            text-decoration: none;
+        }
+    }
 }
 
 .columns {

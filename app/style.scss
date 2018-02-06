@@ -366,6 +366,17 @@ footer {
     margin: 10rem 0 1rem;
     font-size: 1.4rem;
     text-align: center;
+
+    .footer-social {
+        margin-bottom: 1.2rem;
+
+        img {
+            width: 6.4rem;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
 }
 
 .columns {

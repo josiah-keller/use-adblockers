@@ -20,7 +20,6 @@ function toggleWizard() {
 }
 
 function toggleLegal(e) {
-    e.preventDefault();
     document.body.classList.toggle("legal-toggled");
 }
 

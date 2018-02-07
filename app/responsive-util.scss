@@ -1,0 +1,7 @@
+@mixin flatten-columns {
+    display: block;
+
+    .column {
+        flex: none;
+    }
+}

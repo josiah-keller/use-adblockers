@@ -77,12 +77,16 @@ a {
     cursor: pointer;
     position: relative;
     text-decoration: none;
+    transition: transform 0.1s ease-out;
     
     &:hover {
         background: radial-gradient(ellipse at 50% 0%, $light-foreground 0%, $foreground 100%);
     }
     &:focus {
         outline: 0;
+    }
+    &:active {
+        transform: scale(0.9);
     }
     &::before {
         position: absolute;

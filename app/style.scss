@@ -26,6 +26,10 @@ body {
 
 a {
     color: $foreground;
+
+    &:hover {
+        color: $foreground-hover;
+    }
 }
 
 .intro {

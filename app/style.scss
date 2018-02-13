@@ -27,7 +27,7 @@ body {
 a {
     color: $foreground;
 
-    &:hover {
+    &:hover:not(.action-button) {
         color: $foreground-hover;
     }
 }

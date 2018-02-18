@@ -26,7 +26,7 @@ function toggleLegal(e) {
 
 function init() {
     clickable($(".secondary-reasons-toggle"), toggleSecondaryReasons);
-    clickable($(".what-is-button"), toggleWhatIs);
+    clickable($(".what-is-button button"), toggleWhatIs);
     clickable($(".wizard-close"), toggleWizard);
     clickable($(".get-started-button"), toggleWizard);
     clickable($(".legal-link"), toggleLegal);

@@ -140,19 +140,25 @@ a {
     }
 }
 
-.what-is-button .nub {
-    position: absolute;
-    left: 50%;
-    top: calc(100% + 1px);
-    width: 5.657rem;
-    height: 5.657rem;
-    transform: rotate(45deg);
-    transform-origin: 0 0;
-    background: $callout-bg;
-    border-top: 1px solid $callout-border;
-    border-left: 1px solid $callout-border;
-    z-index: 1;
-    display: none;
+.what-is-button {
+    display: inline-block;
+    position: relative;
+    font-size: 0px;
+    
+    .nub {
+        position: absolute;
+        left: 50%;
+        top: calc(100% - 10px);
+        width: 5.657rem;
+        height: 5.657rem;
+        transform: rotate(45deg);
+        transform-origin: 0 0;
+        background: $callout-bg;
+        border-top: 1px solid $callout-border;
+        border-left: 1px solid $callout-border;
+        z-index: 1;
+        display: none;
+    }
 }
 
 .what-is-toggled {

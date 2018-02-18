@@ -1,5 +1,9 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
+const ejs = require("ejs");
+const subtemplate = require("./subtemplate");
 
 module.exports = {
     entry: ["./app/use-adblockers.js", "./app/style.scss"],
@@ -18,6 +22,10 @@ module.exports = {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
             },
+            {
+                test: /\.ejs$/,
+                loader: "ejs-loader",
+            }
         ],
     },
     plugins: [
@@ -25,9 +33,20 @@ module.exports = {
             filename: "bundle.css",
             allChunks: true,
         }),
+        new HtmlWebpackPlugin({
+            alwaysWriteToDisk: true,
+            title: "Use Adblockers to stay safe online and avoid scams",
+            template: "app/template.ejs",
+            filename: "index.html",
+            extraData: {
+                subtemplate: subtemplate("./app/views/home.ejs"),
+            },
+        }),
+        new HtmlWebpackHarddiskPlugin(),
     ],
     devServer: {
-        contentBase: path.join(__dirname, "public"),
+        contentBase: [path.join(__dirname, "public/dist"), path.join(__dirname, "public/static")],
+        watchContentBase: true,
         port: 3000,
     },
 };

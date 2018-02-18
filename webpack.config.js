@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const ejs = require("ejs");
-const homeTemplate = require("./app/views/home.ejs");
+const subtemplate = require("./subtemplate");
 
 module.exports = {
     entry: ["./app/use-adblockers.js", "./app/style.scss"],
@@ -22,6 +22,10 @@ module.exports = {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
             },
+            {
+                test: /\.ejs$/,
+                loader: "ejs-loader",
+            }
         ],
     },
     plugins: [
@@ -35,7 +39,7 @@ module.exports = {
             template: "app/template.ejs",
             filename: "index.html",
             extraData: {
-                subtemplate: homeTemplate,
+                subtemplate: subtemplate("./app/views/home.ejs"),
             },
         }),
         new HtmlWebpackHarddiskPlugin(),

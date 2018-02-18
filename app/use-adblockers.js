@@ -1,5 +1,6 @@
 import wizard from "./wizard";
 import { $, clickable } from "./utils";
+import "./views/home.ejs";
 
 let wizardVisible = false;
 

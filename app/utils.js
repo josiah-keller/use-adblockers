@@ -26,7 +26,7 @@ export function clickable(element, handler) {
 
 export function setConditionalClass(className, condition, element) {
     if (! element) element = document.body;
-    document.body.classList[condition ? "add" : "remove"](className);
+    element.classList[condition ? "add" : "remove"](className);
 }
 
 export function bindProp(className, propName, value, context) {

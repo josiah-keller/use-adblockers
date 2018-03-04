@@ -325,6 +325,15 @@ a {
     .wizard-adblocker-absent {
         display: none;
 
+        .wizard-adblocker-adjective {
+            .wizard-adblocker-best {
+                display: none;
+            }
+            .wizard-adblocker-another {
+                display: inline;
+            }
+        }
+
         .wizard-adblocker-details {
             display: flex;
         }
@@ -359,6 +368,50 @@ a {
         .wizard-adblocker-install {
             margin-top: 0rem;
             margin-left: 0rem;
+        }
+
+        .wizard-adblocker-selector {
+            display: none;
+
+            h4 {
+                margin-bottom: 0px;
+            }
+
+            .wizard-adblocker-selector-option {
+                display: inline-block;
+                padding: 1rem;
+                cursor: pointer;
+                border-radius: 0.5rem;
+                height: 7.2rem;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                
+                img {
+                    width: 7.2rem;
+                    user-select: none;
+                    vertical-align: middle;
+                    margin-right: 0.5rem;
+                }
+
+                &:hover {
+                    background: #dddddd;
+                }
+            }
+        }
+
+        &.first-adblocker-selected {
+            .wizard-adblocker-best {
+                display: inline;
+            }
+            .wizard-adblocker-another {
+                display: none;
+            }
+        }
+        &.multiple-options {
+            .wizard-adblocker-selector {
+                display: block;
+            }
         }
     }
 
@@ -485,4 +538,8 @@ footer {
         width: 100%;
         animation: spin 2s ease-out infinite;
     }
+}
+
+.template-element {
+    display: none !important;
 }

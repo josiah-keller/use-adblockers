@@ -69,4 +69,42 @@ export default {
             },
         ],
     },
+    mobilesafari: {
+        name: "iOS",
+        adblockers: [
+            {
+                name: "Adguard",
+                url: "https://itunes.apple.com/us/app/adguard-adblock-privacy/id1047223162?mt=8",
+                button: "Get it on the App Store",
+                description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
+                can block ads, trackers, and other nuisances.  To get it, tap the button below, and then tap
+                "GET."`,
+                icon: "/images/3rd-party-icons/adguard.svg",
+            },
+            {
+                name: "Brave",
+                url: "https://itunes.apple.com/us/app/brave-browser-fast-adblocker/id1052879175?mt=8",
+                button: "Get it on the App Store",
+                description: `Brave is an alternative browser that you can use instead of Safari.  It blocks
+                ads and trackers, making your browsing experience safer and faster.  It also provides security
+                features like HTTPS Everywhere.  To get it, tap the button below, and then tap "GET."`,
+                icon: "/images/3rd-party-icons/brave.png",
+            },
+        ],
+    },
+    android: {
+        name: "Android",
+        adblockers: [
+            {
+                name: "Brave",
+                url: "https://play.google.com/store/apps/details?id=com.brave.browser&hl=en",
+                button: "Get it on the Play Store",
+                description: `Brave is an alternative browser that you can use instead of Chrome or your
+                default browser.  It blocks ads and trackers, making your browsing experience safer and faster.
+                It also provides security features like HTTPS Everywhere.  To get it, tap the button below,
+                and then tap "Install."`,
+                icon: "/images/3rd-party-icons/brave.png",
+            },
+        ],
+    },
 };

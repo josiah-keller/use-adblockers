@@ -92,4 +92,19 @@ export default {
             },
         ],
     },
+    android: {
+        name: "Android",
+        adblockers: [
+            {
+                name: "Brave",
+                url: "https://play.google.com/store/apps/details?id=com.brave.browser&hl=en",
+                button: "Get it on the Play Store",
+                description: `Brave is an alternative browser that you can use instead of Chrome or your
+                default browser.  It blocks ads and trackers, making your browsing experience safer and faster.
+                It also provides security features like HTTPS Everywhere.  To get it, tap the button below,
+                and then tap "Install."`,
+                icon: "/images/3rd-party-icons/brave.png",
+            },
+        ],
+    },
 };

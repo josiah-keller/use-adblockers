@@ -38,7 +38,9 @@ export default {
         if (bowser.safari) {
             browserName = "safari";
         }
-        
+        if (bowser.ios) {
+            browserName = "mobilesafari";
+        }
         if (! browserName || ! wizardData.hasOwnProperty(browserName)) {
             unknownBrowser = true;
         }

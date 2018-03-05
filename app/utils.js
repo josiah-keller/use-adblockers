@@ -26,7 +26,7 @@ export function clickable(element, handler) {
 
 export function setConditionalClass(className, condition, element) {
     if (! element) element = document.body;
-    document.body.classList[condition ? "add" : "remove"](className);
+    element.classList[condition ? "add" : "remove"](className);
 }
 
 export function bindProp(className, propName, value, context) {
@@ -38,4 +38,20 @@ export function bindProp(className, propName, value, context) {
 
 export function bindText(className, text, context) {
     return bindProp(className, "textContent", text, context);
+}
+
+export function bindArray(array, targetElement, template, bindingFn) {
+    template.classList.add("template-element");
+    targetElement.innerHTML = "";
+    array.forEach((item, index) => {
+        let itemElement = template.cloneNode(true);
+        itemElement.classList.remove("template-element");
+        itemElement.setAttribute("data-array-index", index);
+        targetElement.appendChild(itemElement);
+        toArray(itemElement.querySelectorAll("[data-binding-class]")).forEach(child => {
+            let className = child.getAttribute("data-binding-class") + "-" + index;
+            child.classList.add(className);
+            bindingFn(array[index], className);
+        });
+    });
 }

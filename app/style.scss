@@ -6,6 +6,7 @@ $accent-font: Quicksand, Helvetica, Arial, sans-serif;
 $callout-bg: #fdfdfd;
 $callout-fg: #323232;
 $callout-border: #cccccc;
+$light-text: rgba(0, 0, 0, 0.5);
 
 @import "responsive-util.scss";
 
@@ -121,6 +122,39 @@ a {
     }
 }
 
+.light-button {
+    display: inline-block;
+    font-family: $body-font;
+    font-size: 1.6rem;
+    margin: 0.5rem 0px;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    cursor: pointer;
+
+    .successful-text {
+        display: none;
+    }
+
+    img {
+        width: 1.6rem;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        background: #eeeeee;
+    }
+
+    &.action-successful {
+        .successful-text {
+            display: inline;
+        }
+        .normal-text {
+            display: none;
+        }
+    }
+}
+
 .what-is {
     background: $callout-bg;
     color: $callout-fg;
@@ -171,7 +205,7 @@ a {
 }
 
 .primary-reasons {
-    background: $callout-fg;
+    background: #323232;
     color: #fff;
     padding: 2rem 1rem;
     position: relative;
@@ -240,6 +274,8 @@ a {
     cursor: pointer;
     line-height: 4rem;
     vertical-align: middle;
+    box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    position: relative;
 
     &:hover {
         background: $foreground-hover;
@@ -257,9 +293,49 @@ a {
     }
     .secondary-reasons {
         display: block;
+        border-bottom: 1rem solid #323232;
     }
     .secondary-reasons-toggle {
         display: none;
+    }
+}
+
+.home-cta {
+    width: 100%;
+    background: radial-gradient(ellipse at top, #fff 0%, $light-foreground 100%);
+    padding: 3rem 10% 1rem;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+
+    h2 {
+        font-size: 3rem;
+        font-family: $accent-font;
+        margin-top: 0;
+    }
+
+    .social {
+        margin-bottom: 1.2rem;
+
+        a {
+            display: inline-block;
+            margin-right: 1rem;
+
+            img {
+                width: 4.8rem;
+                margin-right: 1rem;
+                vertical-align: middle;
+            }
+
+            &:not(:only-of-type):not(:first-of-type) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .columns {
+            @include flatten-columns();
+        }
     }
 }
 
@@ -315,11 +391,75 @@ a {
 
         h3 {
             font-size: 2.2rem;
+            margin-top: 0px;
+        }
+        h4 {
+            margin-bottom: 0px;
         }
     }
     
     .wizard-adblocker-present {
         display: none;
+
+        .wizard-social-suggestion {
+            margin: 0px 10% 2rem;
+            border: 1px solid $callout-border;
+            border-radius: 0.5rem;
+            min-height: 8.4rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            font-size: 1.6rem;
+            display: flex;
+
+            .wizard-social-suggestion-profile {
+                width: 6.4rem;
+                height: 6.4rem;
+                flex: 0 0 6.4rem;
+                line-height: 6.4rem;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 50%;
+                background: $light-foreground;
+                color: rgba(0, 0, 0, 0.5);
+                margin-right: 1.5rem;
+
+                @media screen and (max-width: 400px) {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    flex: 0 0 4.8rem;
+                    line-height: 4.8rem;
+                }
+            }
+
+            .wizard-social-suggestion-content {
+                .wizard-social-suggestion-display-name {
+                    margin-right: 0.5rem;
+                    font-weight: bold;
+                }
+                
+                .wizard-social-suggestion-username  {
+                    margin-right: 0.5rem;
+                    color: $light-text;
+                }
+    
+                .wizard-social-suggestion-date {
+                    color: $light-text;
+    
+                    @media screen and (max-width: 680px) {
+                        display: none;
+                    }
+                }
+    
+                .wizard-social-suggestion-text {
+                    -webkit-user-select: text;
+                    -moz-user-select: text;
+                    user-select: text;
+                }
+            }
+        }
     }
     
     .wizard-adblocker-absent {
@@ -389,7 +529,6 @@ a {
                 
                 img {
                     width: 7.2rem;
-                    user-select: none;
                     vertical-align: middle;
                     margin-right: 0.5rem;
                 }
@@ -485,20 +624,10 @@ a {
 }
 
 footer {
-    margin: 10rem 0 1rem;
+    padding: 3rem 0 2rem;
     font-size: 1.4rem;
     text-align: center;
-
-    .footer-social {
-        margin-bottom: 1.2rem;
-
-        img {
-            width: 6.4rem;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
+    border-top: 1rem solid #eee;
 }
 
 .columns {

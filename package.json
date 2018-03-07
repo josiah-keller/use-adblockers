@@ -2,7 +2,10 @@
   "name": "use-adblockers",
   "version": "0.1.0",
   "description": "UseAdblockers.org website",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josiah-keller/use-adblockers.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",

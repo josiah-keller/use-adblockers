@@ -2,19 +2,22 @@
   "name": "use-adblockers",
   "version": "0.1.0",
   "description": "UseAdblockers.org website",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josiah-keller/use-adblockers.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "deploy": "cp -a public/dist /var/www/html; cp -a public/static/. /var/www/html; mv /var/www/html/dist/index.html /var/www/html"
   },
   "author": "Josiah Keller",
   "license": "MIT",
   "dependencies": {
     "bowser": "^1.8.1",
     "dateformat": "^3.0.3",
-    "express": "^4.15.3",
-    "fuckadblock": "^3.2.1",
-    "npm": "^5.7.1"
+    "fuckadblock": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

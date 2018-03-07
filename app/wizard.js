@@ -1,6 +1,7 @@
 import "fuckadblock";
 import bowser from "bowser";
-import { $, $$, clickable, setConditionalClass, bindText, bindProp, bindArray, toArray } from "./utils";
+import dateFormat from "dateformat";
+import { $, $$, clickable, setConditionalClass, bindText, bindProp, bindArray, toArray, copyText } from "./utils";
 import wizardData from "./wizard-data";
 
 let fab = new FuckAdBlock({
@@ -44,7 +45,7 @@ export default {
         if (bowser.android) {
             browserName = "android";
         }
-        if (! browserName || ! wizardData.hasOwnProperty(browserName)) {
+        if (! browserName || ! wizardData.browsers.hasOwnProperty(browserName)) {
             unknownBrowser = true;
         }
         
@@ -56,8 +57,34 @@ export default {
         setConditionalClass("unknown-browser", unknownBrowser);
         setConditionalClass("adblocker-present", adblockerPresent);
         setConditionalClass("adblocker-absent", ! adblockerPresent);
+        if (adblockerPresent) {
+            let socialSuggestions = [], socialSuggestionOptions = wizardData.socialSuggestions.slice(), count = 2;
+            while (count--) {
+                let suggestion = socialSuggestionOptions.splice(
+                    Math.floor(Math.random() * socialSuggestionOptions.length), 1)[0];
+                socialSuggestions.push(suggestion);
+            }
+            bindText("wizard-social-suggestion-date", dateFormat(new Date(), "mmm d h:MM TT"));
+            bindArray(
+                socialSuggestions,
+                $(".wizard-social-suggestions"),
+                $(".wizard-social-suggestion"),
+                (suggestion, className) => {
+                    if (className.match(/wizard-social-suggestion-text/)) {
+                        bindText(className, suggestion);
+                    }
+                }
+            );
+            toArray($$(".wizard-social-copy-button")).forEach(button => {
+                clickable(button, () => {
+                    let textElement = button.parentNode.parentNode.querySelector(".wizard-social-suggestion-text");
+                    let copied = copyText(textElement.innerText);
+                    setConditionalClass("action-successful", copied, button);
+                });
+            });
+        }
         if (! unknownBrowser) {
-            let browser = wizardData[browserName];
+            let browser = wizardData.browsers[browserName];
             let selectedAdblocker = browser.adblockers[selectedAdblockerIndex];
 
             bindText("wizard-browser-name", browser.name);

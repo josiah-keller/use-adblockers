@@ -6,6 +6,7 @@ $accent-font: Quicksand, Helvetica, Arial, sans-serif;
 $callout-bg: #fdfdfd;
 $callout-fg: #323232;
 $callout-border: #cccccc;
+$light-text: rgba(0, 0, 0, 0.5);
 
 @import "responsive-util.scss";
 
@@ -118,6 +119,39 @@ a {
     @media screen and (max-width: 850px) {
         font-size: 1.8rem;
         padding: 1rem 1.4rem;
+    }
+}
+
+.light-button {
+    display: inline-block;
+    font-family: $body-font;
+    font-size: 1.6rem;
+    margin: 0.5rem 0px;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    cursor: pointer;
+
+    .successful-text {
+        display: none;
+    }
+
+    img {
+        width: 1.6rem;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        background: #eeeeee;
+    }
+
+    &.action-successful {
+        .successful-text {
+            display: inline;
+        }
+        .normal-text {
+            display: none;
+        }
     }
 }
 
@@ -357,11 +391,75 @@ a {
 
         h3 {
             font-size: 2.2rem;
+            margin-top: 0px;
+        }
+        h4 {
+            margin-bottom: 0px;
         }
     }
     
     .wizard-adblocker-present {
         display: none;
+
+        .wizard-social-suggestion {
+            margin: 0px 10% 2rem;
+            border: 1px solid $callout-border;
+            border-radius: 0.5rem;
+            min-height: 8.4rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            font-size: 1.6rem;
+            display: flex;
+
+            .wizard-social-suggestion-profile {
+                width: 6.4rem;
+                height: 6.4rem;
+                flex: 0 0 6.4rem;
+                line-height: 6.4rem;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 50%;
+                background: $light-foreground;
+                color: rgba(0, 0, 0, 0.5);
+                margin-right: 1.5rem;
+
+                @media screen and (max-width: 400px) {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    flex: 0 0 4.8rem;
+                    line-height: 4.8rem;
+                }
+            }
+
+            .wizard-social-suggestion-content {
+                .wizard-social-suggestion-display-name {
+                    margin-right: 0.5rem;
+                    font-weight: bold;
+                }
+                
+                .wizard-social-suggestion-username  {
+                    margin-right: 0.5rem;
+                    color: $light-text;
+                }
+    
+                .wizard-social-suggestion-date {
+                    color: $light-text;
+    
+                    @media screen and (max-width: 680px) {
+                        display: none;
+                    }
+                }
+    
+                .wizard-social-suggestion-text {
+                    -webkit-user-select: text;
+                    -moz-user-select: text;
+                    user-select: text;
+                }
+            }
+        }
     }
     
     .wizard-adblocker-absent {
@@ -431,7 +529,6 @@ a {
                 
                 img {
                     width: 7.2rem;
-                    user-select: none;
                     vertical-align: middle;
                     margin-right: 0.5rem;
                 }

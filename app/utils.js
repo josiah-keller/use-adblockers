@@ -55,3 +55,17 @@ export function bindArray(array, targetElement, template, bindingFn) {
         });
     });
 }
+
+export function copyText(text) {
+    let textarea = document.createElement("textarea"), copied;
+    document.body.appendChild(textarea);
+    textarea.value = text;
+    textarea.select();
+    try {
+        copied = document.execCommand("copy");
+    } catch(ex) {
+        copied = false;
+    }
+    document.body.removeChild(textarea);
+    return copied;
+}

@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "cp -a public/dist /var/www/html; cp -a public/static/. /var/www/html; mv /var/www/html/dist/index.html /var/www/html"
   },
   "author": "Josiah Keller",
   "license": "MIT",

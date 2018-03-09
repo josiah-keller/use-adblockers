@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "build": "webpack",
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "deploy": "cp -a public/dist /var/www/html; cp -a public/static/. /var/www/html; mv /var/www/html/dist/index.html /var/www/html"
   },
   "author": "Josiah Keller",
@@ -31,7 +31,9 @@
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7"
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.2"
   }
 }

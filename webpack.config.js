@@ -44,9 +44,4 @@ module.exports = {
         }),
         new HtmlWebpackHarddiskPlugin(),
     ],
-    devServer: {
-        contentBase: [path.join(__dirname, "public/dist"), path.join(__dirname, "public/static")],
-        watchContentBase: true,
-        port: 3000,
-    },
 };

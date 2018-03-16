@@ -39,6 +39,7 @@ module.exports = {
             template: "app/template.ejs",
             filename: "index.html",
             extraData: {
+                analytics: subtemplate("./app/analytics.ejs"),
                 subtemplate: subtemplate("./app/views/home.ejs"),
             },
         }),

@@ -35,7 +35,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            title: "Use Adblockers to stay safe online and avoid scams",
+            title: "UseAdblockers.org - learn how to block annoying ads",
             template: "app/template.ejs",
             filename: "index.html",
             extraData: {

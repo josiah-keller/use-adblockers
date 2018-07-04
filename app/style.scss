@@ -363,6 +363,7 @@ a {
     transition-property: transform, opacity;
     visibility: hidden;
     overflow-y: auto;
+    z-index: 2;
 
     h2 {
         text-align: center;

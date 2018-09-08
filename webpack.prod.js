@@ -1,9 +1,23 @@
 const merge = require("webpack-merge");
+const MiniCssExtracPlugin = require("mini-css-extract-plugin");
 const config = require("./webpack.config");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = merge(config, {
-    plugins: [
-        new UglifyJsPlugin(),
-    ],
+    mode: "production",
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtracPlugin.loader,
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
+                ],
+            },
+        ],
+    },
 });

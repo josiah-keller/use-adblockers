@@ -1,5 +1,5 @@
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const ejs = require("ejs");
@@ -9,18 +9,27 @@ module.exports = {
     entry: ["./app/use-adblockers.js", "./app/style.scss"],
     output: {
         path: path.resolve(__dirname, "public/dist"),
-        filename: "bundle.js",
+        filename: "[hash].js",
         publicPath: "/dist",
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader",
-            },
-            {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            ['@babel/preset-env',
+                                {
+                                    targets: {
+                                        "ie": "11",
+                                    },
+                                },
+                            ],
+                        ],
+                    },
+                },
             },
             {
                 test: /\.ejs$/,
@@ -29,9 +38,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new ExtractTextPlugin({
-            filename: "bundle.css",
-            allChunks: true,
+        new MiniCssExtractPlugin({
+            filename: "[hash].css",
         }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,

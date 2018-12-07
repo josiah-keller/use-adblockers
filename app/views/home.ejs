@@ -106,85 +106,87 @@
     </div>
 </section>
 
-<section class="wizard">
-    <button class="wizard-close" title="Close">
-        <img src="/images/elegant/close.svg" alt="Close">
-    </button>
-    <h2>Say goodbye to ads forever</h2>
-    <div class="wizard-contents">
-        <div class="wizard-adblocker-present">
-            <h3>Congratulations!</h3>
-            <p>It looks like you're already blocking ads.  Way to go!</p>
-            <h4>Spread the great news!</h4>
-            <p>
-                Let your friends know that you're blocking ads.  Help them find the light too by posting about
-                UseAdblockers.org on your social media.  Don't know what to say?  Try one of these ideas:
-            </p>
-            <div class="wizard-social-suggestion">
-                <div class="wizard-social-suggestion-profile">You</div>
-                <div class="wizard-social-suggestion-content">
-                    <span class="wizard-social-suggestion-display-name">You</span>
-                    <span class="wizard-social-suggestion-username">@your_username</span>
-                    <span class="wizard-social-suggestion-date"></span>
-                    <div class="wizard-social-suggestion-text" data-binding-class="wizard-social-suggestion-text"></div>
-                    <div class="wizard-social-suggestion-actions">
-                        <button class="light-button wizard-social-copy-button">
-                            <span class="normal-text">
-                                <img src="/images/elegant/clipboard.svg" alt="Clipboard">
-                                Copy this message
-                            </span>
-                            <span class="successful-text">
-                                <img src="/images/elegant/check.svg" alt="Checkmark">
-                                Message copied
-                            </span>
-                        </button>
+<section class="wizard-container">
+    <div class="wizard">
+        <button class="wizard-close" title="Close">
+            <img src="/images/elegant/close.svg" alt="Close">
+        </button>
+        <h2>Say goodbye to ads forever</h2>
+        <div class="wizard-contents">
+            <div class="wizard-adblocker-present">
+                <h3>Congratulations!</h3>
+                <p>It looks like you're already blocking ads.  Way to go!</p>
+                <h4>Spread the great news!</h4>
+                <p>
+                    Let your friends know that you're blocking ads.  Help them find the light too by posting about
+                    UseAdblockers.org on your social media.  Don't know what to say?  Try one of these ideas:
+                </p>
+                <div class="wizard-social-suggestion">
+                    <div class="wizard-social-suggestion-profile">You</div>
+                    <div class="wizard-social-suggestion-content">
+                        <span class="wizard-social-suggestion-display-name">You</span>
+                        <span class="wizard-social-suggestion-username">@your_username</span>
+                        <span class="wizard-social-suggestion-date"></span>
+                        <div class="wizard-social-suggestion-text" data-binding-class="wizard-social-suggestion-text"></div>
+                        <div class="wizard-social-suggestion-actions">
+                            <button class="light-button wizard-social-copy-button">
+                                <span class="normal-text">
+                                    <img src="/images/elegant/clipboard.svg" alt="Clipboard">
+                                    Copy this message
+                                </span>
+                                <span class="successful-text">
+                                    <img src="/images/elegant/check.svg" alt="Checkmark">
+                                    Message copied
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div class="wizard-social-suggestions"></div>
             </div>
-            <div class="wizard-social-suggestions"></div>
-        </div>
-        <div class="wizard-adblocker-absent">
-            <h3>
-                Here's 
-                <span class="wizard-adblocker-adjective">
-                    <span class="wizard-adblocker-best">the best</span>
-                    <span class="wizard-adblocker-another">another great</span>
-                </span>
-                way to block ads in <span class="wizard-browser-name"></span>:
-            </h3>
-            <div class="wizard-adblocker-details">
-                <div class="wizard-adblocker-icon-container">
-                    <img class="wizard-adblocker-icon" alt="Ad blocker icon">
+            <div class="wizard-adblocker-absent">
+                <h3>
+                    Here's 
+                    <span class="wizard-adblocker-adjective">
+                        <span class="wizard-adblocker-best">the best</span>
+                        <span class="wizard-adblocker-another">another great</span>
+                    </span>
+                    way to block ads in <span class="wizard-browser-name"></span>:
+                </h3>
+                <div class="wizard-adblocker-details">
+                    <div class="wizard-adblocker-icon-container">
+                        <img class="wizard-adblocker-icon" alt="Ad blocker icon">
+                    </div>
+                    <div class="wizard-adblocker-info">
+                        <h4 class="wizard-adblocker-name"></h4>
+                        <p class="wizard-adblocker-description"></p>
+                        <a class="wizard-adblocker-install action-button action-button-primary" target="_blank"></a>
+                    </div>
                 </div>
-                <div class="wizard-adblocker-info">
-                    <h4 class="wizard-adblocker-name"></h4>
-                    <p class="wizard-adblocker-description"></p>
-                    <a class="wizard-adblocker-install action-button action-button-primary" target="_blank"></a>
+                <div class="wizard-adblocker-disclaimer">
+                    UseAdblockers.org is not affiliated with <span class="wizard-browser-name"></span>
+                    or <span class="wizard-adblocker-name"></span>
+                </div>
+                <div class="wizard-adblocker-selector">
+                    <h4>Check out some other ways to block ads in <span class="wizard-browser-name"></span>:</h4>
+                    <div class="wizard-adblocker-selector-option">
+                        <img class="wizard-adblocker-selector-icon" data-binding-class="wizard-adblocker-selector-icon" alt="Ad blocker icon">
+                        <span class="wizard-adblocker-selector-name" data-binding-class="wizard-adblocker-selector-name"></span>
+                    </div>
+                    <div class="wizard-adblocker-selector-options"></div>
                 </div>
             </div>
-            <div class="wizard-adblocker-disclaimer">
-                UseAdblockers.org is not affiliated with <span class="wizard-browser-name"></span>
-                or <span class="wizard-adblocker-name"></span>
+            <div class="wizard-unknown-browser">
+                <h3>Oops</h3>
+                <p>Sorry, we don't have any info for your browser.  Is it a new or less common one?</p>
+                <p>If you'd like to help, you can report this on GitHub.</p>
             </div>
-            <div class="wizard-adblocker-selector">
-                <h4>Check out some other ways to block ads in <span class="wizard-browser-name"></span>:</h4>
-                <div class="wizard-adblocker-selector-option">
-                    <img class="wizard-adblocker-selector-icon" data-binding-class="wizard-adblocker-selector-icon" alt="Ad blocker icon">
-                    <span class="wizard-adblocker-selector-name" data-binding-class="wizard-adblocker-selector-name"></span>
+            <div class="wizard-loading">
+                <div class="spinner">
+                    <img src="/images/elegant/cog.svg" alt="Spinning cog">
                 </div>
-                <div class="wizard-adblocker-selector-options"></div>
+                <span>Wait a moment while we check your browser...</span>
             </div>
-        </div>
-        <div class="wizard-unknown-browser">
-            <h3>Oops</h3>
-            <p>Sorry, we don't have any info for your browser.  Is it a new or less common one?</p>
-            <p>If you'd like to help, you can report this on GitHub.</p>
-        </div>
-        <div class="wizard-loading">
-            <div class="spinner">
-                <img src="/images/elegant/cog.svg" alt="Spinning cog">
-            </div>
-            <span>Wait a moment while we check your browser...</span>
         </div>
     </div>
 </section>

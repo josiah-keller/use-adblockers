@@ -207,7 +207,7 @@ a {
 .primary-reasons {
     background: #323232;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 2rem 10%;
     position: relative;
 
     h2 {
@@ -223,6 +223,9 @@ a {
         line-height: 1.4;
     }
 
+    @media screen and (max-width: 1280px) {
+        padding: 2rem 1rem;
+    }
     @media screen and (max-width: 850px) {
         .columns {
             @include flatten-columns();
@@ -233,7 +236,7 @@ a {
 .secondary-reasons {
     background: #222;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 2rem 10%;
     display: none;
 
     h2 {
@@ -257,6 +260,9 @@ a {
         line-height: 1.5;
     }
 
+    @media screen and (max-width: 1280px) {
+        padding: 2rem 1rem;
+    }
     @media screen and (max-width: 850px) {
         .columns {
             @include flatten-columns();

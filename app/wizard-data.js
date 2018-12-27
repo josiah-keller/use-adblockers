@@ -88,7 +88,7 @@ export default {
                     button: "Get it on the App Store",
                     description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
                     can block ads, trackers, and other nuisances.  To get it, tap the button below, and then tap
-                    "GET."`,
+                    "GET."  Then, follow the instructions in the app to turn it on.`,
                     icon: "/images/3rd-party-icons/adguard.svg",
                 },
                 {

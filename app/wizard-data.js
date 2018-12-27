@@ -60,6 +60,15 @@ export default {
             name: "Safari",
             adblockers: [
                 {
+                    name: "uBlock Origin",
+                    url: "https://safari-extensions.apple.com/details/?id=com.el1t.uBlock-3NU33NW2M3",
+                    button: "Get it from Safari Extensions",
+                    description: `uBlock Origin is an extension that you can add to Safari.  It is very
+                    effective at blocking ads and trackers.  To get it, click the button below, and then click
+                    "Install."`,
+                    icon: "/images/3rd-party-icons/ublock-origin.svg",
+                },
+                {
                     name: "Adguard",
                     url: "https://safari-extensions.apple.com/details/?id=com.adguard.safari-N33TQXN8C7",
                     button: "Get it from Safari Extensions",
@@ -79,7 +88,7 @@ export default {
                     button: "Get it on the App Store",
                     description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
                     can block ads, trackers, and other nuisances.  To get it, tap the button below, and then tap
-                    "GET."`,
+                    "GET."  Then, follow the instructions in the app to turn it on.`,
                     icon: "/images/3rd-party-icons/adguard.svg",
                 },
                 {

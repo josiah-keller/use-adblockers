@@ -2,13 +2,12 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
-const ejs = require("ejs");
 const subtemplate = require("./subtemplate");
 
 module.exports = {
     entry: ["./app/use-adblockers.js", "./app/style.scss"],
     output: {
-        path: path.resolve(__dirname, "public/dist"),
+        path: path.resolve(__dirname, "public"),
         filename: "[hash].js",
         publicPath: "/dist",
     },

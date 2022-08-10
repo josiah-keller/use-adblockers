@@ -60,21 +60,12 @@ export default {
             name: "Safari",
             adblockers: [
                 {
-                    name: "uBlock Origin",
-                    url: "https://safari-extensions.apple.com/details/?id=com.el1t.uBlock-3NU33NW2M3",
+                    name: "AdGuard",
+                    url: "https://apps.apple.com/us/app/adguard-for-safari/id1440147259?mt=12",
                     button: "Get it from Safari Extensions",
-                    description: `uBlock Origin is an extension that you can add to Safari.  It is very
-                    effective at blocking ads and trackers.  To get it, click the button below, and then click
-                    "Install."`,
-                    icon: "/images/3rd-party-icons/ublock-origin.svg",
-                },
-                {
-                    name: "Adguard",
-                    url: "https://safari-extensions.apple.com/details/?id=com.adguard.safari-N33TQXN8C7",
-                    button: "Get it from Safari Extensions",
-                    description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
+                    description: `AdGuard is an extension that you can add to Safari.  It's fast and
                     can block ads, trackers, and other nuisances.  To get it, click the button below, and then click
-                    "Install."`,
+                    "GET."`,
                     icon: "/images/3rd-party-icons/adguard.svg",
                 },
             ],
@@ -83,10 +74,10 @@ export default {
             name: "iOS",
             adblockers: [
                 {
-                    name: "Adguard",
+                    name: "AdGuard",
                     url: "https://itunes.apple.com/us/app/adguard-adblock-privacy/id1047223162?mt=8",
                     button: "Get it on the App Store",
-                    description: `Adguard Adblocker is an extension that you can add to Safari.  It's fast and
+                    description: `AdGuard is an extension that you can add to Safari.  It's fast and
                     can block ads, trackers, and other nuisances.  To get it, tap the button below, and then tap
                     "GET."  Then, follow the instructions in the app to turn it on.`,
                     icon: "/images/3rd-party-icons/adguard.svg",

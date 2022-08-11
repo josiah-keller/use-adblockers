@@ -14,7 +14,7 @@
   "author": "Josiah Keller",
   "license": "MIT",
   "dependencies": {
-    "bowser": "^1.9.4",
+    "bowser": "^2.10.0",
     "dateformat": "^3.0.3",
     "fuckadblock": "^3.2.1"
   },

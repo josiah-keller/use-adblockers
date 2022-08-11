@@ -32,8 +32,8 @@ export default {
             adblockers: [
                 {
                     name: "uBlock Origin",
-                    url: "https://www.microsoft.com/store/productId/9NBLGGH444L4",
-                    button: "Get it from the Microsoft Store",
+                    url: "https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak",
+                    button: "Get it from Edge Add-ons",
                     description: `uBlock Origin is an extension that you can add to Microsoft Edge.  It is very
                     effective at blocking ads and trackers.  To get it, click the button below, and then click
                     "Install."`,

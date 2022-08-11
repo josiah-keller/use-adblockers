@@ -1,5 +1,5 @@
 import "fuckadblock";
-import bowser from "bowser";
+import Bowser from "bowser";
 import dateFormat from "dateformat";
 import { $, $$, clickable, setConditionalClass, bindText, bindProp, bindArray, toArray, copyText } from "./utils";
 import wizardData from "./wizard-data";
@@ -24,25 +24,27 @@ export default {
             adblockerPresent = false;
         });
 
-        if (bowser.chrome) {
+        const browser = Bowser.getParser(navigator.userAgent);
+
+        if (browser.isBrowser("chrome", true)) {
             browserName = "chrome";
         }
-        if (bowser.firefox) {
+        if (browser.isBrowser("firefox", true)) {
             browserName = "firefox";
         }
-        if (bowser.msedge) {
+        if (browser.isBrowser("edge", true)) {
             browserName = "edge";
         }
-        if (bowser.msie) {
+        if (browser.isBrowser("ie", true)) {
             browserName = "ie";
         }
-        if (bowser.safari) {
+        if (browser.isBrowser("safari", true) && browser.getOSName() == "macOS") {
             browserName = "safari";
         }
-        if (bowser.ios) {
+        if (browser.isBrowser("safari", true) && browser.getOSName() == "iOS") {
             browserName = "mobilesafari";
         }
-        if (bowser.android) {
+        if (browser.getOSName() == "Android") {
             browserName = "android";
         }
         if (! browserName || ! wizardData.browsers.hasOwnProperty(browserName)) {

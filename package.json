@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4",
     "babel-preset-es2015-ie": "^6.7.0",
-    "css-loader": "^1.0.1",
+    "css-loader": "^6.7.1",
     "ejs": "^2.6.1",
     "ejs-loader": "^0.3.1",
     "html-webpack-harddisk-plugin": "^0.2.0",

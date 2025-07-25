@@ -1,5 +1,4 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const subtemplate = require("./subtemplate");
@@ -9,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "public"),
         filename: "[hash].js",
-        publicPath: "/",
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -22,7 +21,7 @@ module.exports = {
                             ['@babel/preset-env',
                                 {
                                     targets: {
-                                        "ie": "11",
+                                        node: "16"
                                     },
                                 },
                             ],
@@ -33,13 +32,13 @@ module.exports = {
             {
                 test: /\.ejs$/,
                 loader: "ejs-loader",
+                options: {
+                    esModule: false
+                }
             }
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[hash].css",
-        }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
             title: "UseAdblockers.org - learn how to block annoying ads",

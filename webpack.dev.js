@@ -17,26 +17,24 @@ module.exports = merge(config, {
                 use: [
                     "style-loader",
                     {
-                        loader: "css-loader",
+                        loader: "css-loader"
                     },
                     {
                         loader: "sass-loader",
+                        options: {
+                            implementation: require('sass')
+                        }
                     },
                 ],
             },
         ],
     },
     devServer: {
-        static: [
-            {
-                directory: path.join(__dirname, "public"),
-                publicPath: "/",
-            },
-            {
-                directory: path.join(__dirname, "dist"),
-                publicPath: "/",
-            },
-        ],
+        contentBase: path.join(__dirname, "public"),
+        publicPath: "/",
+        hot: true,
         port: 3000,
+        stats: 'minimal',
+        watchContentBase: true
     },
 });

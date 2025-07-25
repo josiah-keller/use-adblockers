@@ -8,14 +8,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --config webpack.dev.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.prod.js"
   },
   "author": "Josiah Keller",
   "license": "MIT",
   "dependencies": {
-    "bowser": "^2.10.0",
-    "dateformat": "^3.0.3",
+    "bowser": "^2.11.0",
+    "dateformat": "^5.0.3",
     "fuckadblock": "^3.2.1"
   },
   "devDependencies": {
@@ -29,12 +29,12 @@
     "html-webpack-harddisk-plugin": "^0.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.5",
-    "sass": "^1.49.0",
-    "sass-loader": "^10",
+    "sass": "^1.89.2",
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
-    "webpack": "^4.37.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.3",
-    "webpack-merge": "^4.1.4"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.3",
+    "webpack-merge": "^4.2.2"
   }
 }
